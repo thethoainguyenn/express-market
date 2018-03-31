@@ -14,3 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('index', [
+    'as' => 'trang-chu',
+    'uses' => 'PageController@getIndex'
+]);
+
+Route::get('loai-san-pham', [
+    'as' => 'loaisanpham',
+    'uses' => 'PageController@getCategory'
+]);
+
+Route::get('chi-tiet-san-pham', [
+    'as' => 'chitietsanpham',
+    'uses' => 'PageController@getProductDetail'
+]);
+
+Route::get('lien-he', [
+    'as' => 'lienhe',
+    'uses' => 'PageController@getContact'
+]);
