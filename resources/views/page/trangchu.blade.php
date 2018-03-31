@@ -141,7 +141,7 @@
 						<div class="col-lg-12 col-md-12 col-sm-12">
 							
 							<div class="carousel-heading">
-								<h4>Featured Products</h4>
+								<h4>Sản phẩm công nghệ mới</h4>
 								<div class="carousel-arrows">
 									<i class="icons icon-left-dir"></i>
 									<i class="icons icon-right-dir"></i>
@@ -155,23 +155,24 @@
 						<div class="carousel owl-carousel-wrap col-lg-12 col-md-12 col-sm-12">
 							
 							<div class="owl-carousel" data-max-items="4">
-									
+								<!-- START SHOW PRODUCT COMPUTER -->
 									<!-- Slide -->
+									@foreach($new_product_computer as $new)
 									<div>
 										<!-- Carousel Item -->
 										<div class="product">
 											
 											<div class="product-image">
 												<span class="product-tag">Sale</span>
-												<img src="source/img/products/sample4.jpg" alt="Product1">
+												<img src="source/img/products/technology/{{$new -> url_hinh}}" alt="Product1">
 												<a href="products_page_v1.html" class="product-hover">
-													<i class="icons icon-eye-1"></i> Quick View
+													<i class="icons icon-eye-1"></i> Xem
 												</a>
 											</div>
 											
 											<div class="product-info">
-												<h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-												<span class="price">$281.00</span>
+												<h5><a href="products_page_v1.html">{{$new -> ten_sp}}</a></h5>
+												<span class="price">{{$new -> gia}}</span>
 												<div class="rating readonly-rating" data-score="4"></div>
 											</div>
 											
@@ -199,240 +200,9 @@
 										</div>
 										<!-- /Carousel Item -->
 									</div>
+									@endforeach
 									<!-- /Slide -->
-									
-									
-									<!-- Slide -->
-									<div>
-										<!-- Carousel Item -->
-										<div class="product">
-											
-											<div class="product-image">
-												<img src="source/img/products/sample5.jpg" alt="Product1">
-												<a href="products_page_v1.html" class="product-hover">
-													<i class="icons icon-eye-1"></i> Quick View
-												</a>
-											</div>
-											
-											<div class="product-info">
-												<h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-												<span class="price">$281.00</span>
-												<div class="rating readonly-rating" data-score="4"></div>
-											</div>
-											
-											<div class="product-actions">
-												<span class="add-to-cart">
-													<span class="action-wrapper">
-														<i class="icons icon-basket-2"></i>
-														<span class="action-name">Add to cart</span>
-													</span >
-												</span>
-												<span class="add-to-favorites">
-													<span class="action-wrapper">
-														<i class="icons icon-heart-empty"></i>
-														<span class="action-name">Add to wishlist</span>
-													</span>
-												</span>
-												<span class="add-to-compare">
-													<span class="action-wrapper">
-														<i class="icons icon-docs"></i>
-														<span class="action-name">Add to Compare</span>
-													</span>
-												</span>
-											</div>
-											
-										</div>
-										<!-- /Carousel Item -->
-									</div>
-									<!-- /Slide -->
-									
-									
-									
-									<!-- Slide -->
-									<div>
-										<!-- Carousel Item -->
-										<div class="product">
-											
-											<div class="product-image">
-												<img src="source/img/products/sample6.jpg" alt="Product1">
-												<a href="products_page_v1.html" class="product-hover">
-													<i class="icons icon-eye-1"></i> Quick View
-												</a>
-											</div>
-											
-											<div class="product-info">
-												<h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-												<span class="price">$281.00</span>
-												<div class="rating readonly-rating" data-score="4"></div>
-											</div>
-											
-											<div class="product-actions">
-												<span class="add-to-cart">
-													<span class="action-wrapper">
-														<i class="icons icon-basket-2"></i>
-														<span class="action-name">Add to cart</span>
-													</span >
-												</span>
-												<span class="add-to-favorites">
-													<span class="action-wrapper">
-														<i class="icons icon-heart-empty"></i>
-														<span class="action-name">Add to wishlist</span>
-													</span>
-												</span>
-												<span class="add-to-compare">
-													<span class="action-wrapper">
-														<i class="icons icon-docs"></i>
-														<span class="action-name">Add to Compare</span>
-													</span>
-												</span>
-											</div>
-											
-										</div>
-										<!-- /Carousel Item -->
-									</div>
-									<!-- /Slide -->
-									
-									
-									
-									
-									<!-- Slide -->
-									<div>
-										<!-- Carousel Item -->
-										<div class="product">
-											
-											<div class="product-image">
-												<img src="source/img/products/sample4.jpg" alt="Product1">
-												<a href="products_page_v1.html" class="product-hover">
-													<i class="icons icon-eye-1"></i> Quick View
-												</a>
-											</div>
-											
-											<div class="product-info">
-												<h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-												<span class="price">$281.00</span>
-												<div class="rating readonly-rating" data-score="4"></div>
-											</div>
-											
-											<div class="product-actions">
-												<span class="add-to-cart">
-													<span class="action-wrapper">
-														<i class="icons icon-basket-2"></i>
-														<span class="action-name">Add to cart</span>
-													</span >
-												</span>
-												<span class="add-to-favorites">
-													<span class="action-wrapper">
-														<i class="icons icon-heart-empty"></i>
-														<span class="action-name">Add to wishlist</span>
-													</span>
-												</span>
-												<span class="add-to-compare">
-													<span class="action-wrapper">
-														<i class="icons icon-docs"></i>
-														<span class="action-name">Add to Compare</span>
-													</span>
-												</span>
-											</div>
-											
-										</div>
-										<!-- /Carousel Item -->
-									</div>
-									<!-- /Slide -->
-									
-									
-									
-									
-									<!-- Slide -->
-									<div>
-										<!-- Carousel Item -->
-										<div class="product">
-											
-											<div class="product-image">
-												<img src="source/img/products/sample5.jpg" alt="Product1">
-												<a href="products_page_v1.html" class="product-hover">
-													<i class="icons icon-eye-1"></i> Quick View
-												</a>
-											</div>
-											
-											<div class="product-info">
-												<h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-												<span class="price">$281.00</span>
-												<div class="rating readonly-rating" data-score="4"></div>
-											</div>
-											
-											<div class="product-actions">
-												<span class="add-to-cart">
-													<span class="action-wrapper">
-														<i class="icons icon-basket-2"></i>
-														<span class="action-name">Add to cart</span>
-													</span >
-												</span>
-												<span class="add-to-favorites">
-													<span class="action-wrapper">
-														<i class="icons icon-heart-empty"></i>
-														<span class="action-name">Add to wishlist</span>
-													</span>
-												</span>
-												<span class="add-to-compare">
-													<span class="action-wrapper">
-														<i class="icons icon-docs"></i>
-														<span class="action-name">Add to Compare</span>
-													</span>
-												</span>
-											</div>
-											
-										</div>
-										<!-- /Carousel Item -->
-									</div>
-									<!-- /Slide -->
-									
-									
-									
-									
-									
-									<!-- Slide -->
-									<div>
-										<!-- Carousel Item -->
-										<div class="product">
-											
-											<div class="product-image">
-												<img src="source/img/products/sample6.jpg" alt="Product1">
-												<a href="products_page_v1.html" class="product-hover">
-													<i class="icons icon-eye-1"></i> Quick View
-												</a>
-											</div>
-											
-											<div class="product-info">
-												<h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-												<span class="price">$281.00</span>
-												<div class="rating readonly-rating" data-score="4"></div>
-											</div>
-											
-											<div class="product-actions">
-												<span class="add-to-cart">
-													<span class="action-wrapper">
-														<i class="icons icon-basket-2"></i>
-														<span class="action-name">Add to cart</span>
-													</span >
-												</span>
-												<span class="add-to-favorites">
-													<span class="action-wrapper">
-														<i class="icons icon-heart-empty"></i>
-														<span class="action-name">Add to wishlist</span>
-													</span>
-												</span>
-												<span class="add-to-compare">
-													<span class="action-wrapper">
-														<i class="icons icon-docs"></i>
-														<span class="action-name">Add to Compare</span>
-													</span>
-												</span>
-											</div>
-											
-										</div>
-										<!-- /Carousel Item -->
-									</div>
-									<!-- /Slide -->
+								<!-- END SHOW PRODUCT COMPUTER -->		
 									
 									
 							</div>
@@ -452,7 +222,7 @@
 						<div class="col-lg-12 col-md-12 col-sm-12">
 							
 							<div class="carousel-heading">
-								<h4>New Collection</h4>
+								<h4>Mỹ phẩm mới</h4>
 								<div class="carousel-arrows">
 									<i class="icons icon-left-dir"></i>
 									<i class="icons icon-right-dir"></i>
@@ -754,192 +524,15 @@
 					<!-- /New Collection -->
 					
 					
-                    
-                    <!-- News -->
-                    <div class="products-row row">
-                        
-                        <!-- Carousel Heading -->
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            
-                            <div class="carousel-heading">
-                                <h4>Latest news &amp; Reviews</h4>
-                                <div class="carousel-arrows">
-                                    <i class="icons icon-left-dir"></i>
-                                    <i class="icons icon-right-dir"></i>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <!-- /Carousel Heading -->
-                        
-                        <!-- Carousel -->
-				<div class="carousel owl-carousel-wrap col-lg-12 col-md-12 col-sm-12">
 					
-					<div class="owl-carousel" data-max-items="2">
-							
-						<!-- Slide -->
-						<div>
-							<!-- Carousel Item -->
-							<article class="news">
-								
-								<div class="news-background">
-								
-									<div class="row">
-										<div class="col-lg-6 col-md-6 col-sm-6 news-thumbnail">
-											<a href="#"><img src="source/img/news/sample1.jpg" alt="News1"></a>
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-6 news-content">
-											<h5><a href="blog_post.html">Lorem Ipsum</a></h5>
-											<span class="date"><i class="icons icon-clock-1"></i> 23 April, 2012</span>
-											<p>Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh.</p>
-										</div>
-									</div>
-									
-								</div>
-								
-							</article>
-							<!-- /Carousel Item -->
-						</div>
-						<!-- /Slide -->
-						
-						
-						<!-- Slide -->
-						<div>
-							
-							<!-- Carousel Item -->
-							<article class="news">
-								
-								<div class="news-background">
-								
-									<div class="row">
-										<div class="col-lg-6 col-md-6 col-sm-6 news-thumbnail">
-											<a href="#"><img src="source/img/news/sample2.jpg" alt="News1"></a>
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-6 news-content">
-											<h5><a href="blog_post.html">Lorem Ipsum</a></h5>
-											<span class="date"><i class="icons icon-clock-1"></i> 23 April, 2012</span>
-											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin.</p>
-										</div>
-									</div>
-								
-								</div>
-								
-							</article>
-							<!-- /Carousel Item -->
-							
-						</div>
-						<!-- /Slide -->
-						
-						
-						
-						<!-- Slide -->
-						<div>
-							
-							<!-- Carousel Item -->
-							<article class="news">
-								
-								<div class="news-background">
-								
-									<div class="row">
-										<div class="col-lg-6 col-md-6 col-sm-6 news-thumbnail">
-											<a href="#"><img src="source/img/news/sample2.jpg" alt="News1"></a>
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-6 news-content">
-											<h5><a href="blog_post.html">Lorem Ipsum</a></h5>
-											<span class="date"><i class="icons icon-clock-1"></i> 23 April, 2012</span>
-											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin.</p>
-										</div>
-									</div>
-								
-								</div>
-								
-							</article>
-							<!-- /Carousel Item -->
-							
-						</div>
-						<!-- /Slide -->
-						
-						
-						
-						
-						<!-- Slide -->
-						<div>
-							
-							<!-- Carousel Item -->
-							<article class="news">
-								
-								<div class="news-background">
-								
-									<div class="row">
-										<div class="col-lg-6 col-md-6 col-sm-6 news-thumbnail">
-											<a href="#"><img src="source/img/news/sample2.jpg" alt="News1"></a>
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-6 news-content">
-											<h5><a href="blog_post.html">Lorem Ipsum</a></h5>
-											<span class="date"><i class="icons icon-clock-1"></i> 23 April, 2012</span>
-											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin.</p>
-										</div>
-									</div>
-								
-								</div>
-								
-							</article>
-							<!-- /Carousel Item -->
-							
-						</div>
-						<!-- /Slide -->
-						
-						
-						
-						
-						<!-- Slide -->
-						<div>
-							
-							<!-- Carousel Item -->
-							<article class="news">
-								
-								<div class="news-background">
-								
-									<div class="row">
-										<div class="col-lg-6 col-md-6 col-sm-6 news-thumbnail">
-											<a href="#"><img src="source/img/news/sample2.jpg" alt="News1"></a>
-										</div>
-										<div class="col-lg-6 col-md-6 col-sm-6 news-content">
-											<h5><a href="blog_post.html">Lorem Ipsum</a></h5>
-											<span class="date"><i class="icons icon-clock-1"></i> 23 April, 2012</span>
-											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Suspendisse sollicitudin.</p>
-										</div>
-									</div>
-								
-								</div>
-								
-							</article>
-							<!-- /Carousel Item -->
-							
-						</div>
-						<!-- /Slide -->
-						
-						
-					</div>
-				
-				</div>
-				<!-- /Carousel -->
-				
-			</div>
-			<!-- /News -->
-			
-                    
-
-
-					
-					<!-- Random Products -->
+					<!-- ĐỒ CHƠI TRẺ EM -->
 					<div class="products-row row">
 						
 						<!-- Carousel Heading -->
 						<div class="col-lg-12 col-md-12 col-sm-12">
 							
 							<div class="carousel-heading">
-								<h4>Random Products</h4>
+								<h4>Đồ chơi trẻ em mới</h4>
 								<div class="carousel-arrows">
 									<i class="icons icon-left-dir"></i>
 									<i class="icons icon-right-dir"></i>
@@ -1237,7 +830,7 @@
 						<!-- /Carousel -->
 						
 					</div>
-					<!-- /Random Products -->
+					<!-- /ĐỒ CHƠI TRẺ EM -->
 					
 					
 

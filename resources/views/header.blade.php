@@ -162,8 +162,8 @@
 							
 							<li class="home-green current-item">
 								<a href="home_v1.html">
-									<span class="nav-caption">Home</span>
-									<span class="nav-description">Variety of Layouts</span>
+									<span class="nav-caption">Trang chủ</span>
+									<span class="nav-description">Sản phẩm mới nhất</span>
 								</a>
 								
 								<ul class="normal-dropdown normalAnimation">
@@ -205,9 +205,9 @@
 							</li>
 							
 							<li class="red">
-								<a href="#">
-									<span class="nav-caption">Cameras</span>
-									<span class="nav-description">Photo & Video</span>
+								<a href="{{route('loaisanpham',1)}}">
+									<span class="nav-caption">Điện thoại</span>
+									<span class="nav-description">Điện thoại & Tablet</span>
 								</a>
 								
 								<ul class="wide-dropdown normalAniamtion">
@@ -242,30 +242,30 @@
 							</li>
 							
 							<li class="blue">
-								<a href="category_v2.html">
-									<span class="nav-caption">Computers</span>
-									<span class="nav-description">Laptops & Tablets</span>
+								<a href="{{route('loaisanpham',2)}}">
+									<span class="nav-caption">Tivi - Video</span>
+									<span class="nav-description">Tivi - Đầu đĩa karaoke</span>
 								</a>
 							</li>
 							
 							<li class="orange">
-								<a href="category_v1.html">
-									<span class="nav-caption">Cell phones</span>
-									<span class="nav-description">Phones & Accessories</span>
+								<a href="{{route('loaisanpham',3)}}">
+									<span class="nav-caption">Phụ kiện</span>
+									<span class="nav-description">Phụ kiện công nghệ</span>
 								</a>
 							</li>
 							
 							<li class="green">
 								<a href="blog.html">
-									<span class="nav-caption">Blog</span>
-									<span class="nav-description">News & Reviews</span>
+									<span class="nav-caption">Giới Thiệu</span>
+									<span class="nav-description">Express market</span>
 								</a>
 							</li>
 							
 							<li class="purple">
 								<a href="contact.html">
-									<span class="nav-caption">Contact</span>
-									<span class="nav-description">Store Locations</span>
+									<span class="nav-caption">Liên hệ</span>
+									<span class="nav-description">19001060</span>
 								</a>
 							</li>
 							
