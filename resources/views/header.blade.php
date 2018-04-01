@@ -36,52 +36,28 @@
 							
 							<nav id="middle-navigation" class="col-lg-8 col-md-8 col-sm-8">
 								<ul class="pull-right">
-									<li class="blue">
-										<a href="compare_products.html"><i class="icons icon-docs"></i>0 Items</a>
-                                    </li>
-									<li class="red">
-										<a href="wishlist.html"><i class="icons icon-heart-empty"></i>2 Items</a>
-                                    </li>
-									<li class="orange"><a href="order_info.html"><i class="icons icon-basket-2"></i>17 Items</a>
+									@if(Session::has('cart'))
+									<li class="orange"><a href="order_info.html"><i class="icons icon-basket-2"></i>{{Session('cart')->totalQty}}</a>
                                     	<ul id="cart-dropdown" class="box-dropdown parent-arrow">
 											<li>
                                             	<div class="box-wrapper parent-border">
-                                                    <p>Recently added item(s)</p>
+                                                    <p>Thông tin giỏ hàng của bạn</p>
                                                     
                                                     <table class="cart-table">
+														
+														@foreach($product_cart as $p)
                                                     	<tr>
-                                                    		<td><img src="source/img/products/sample1.jpg" alt="product"></td>
+                                                    		<td><img src="source/img/products/{{$p['item']['url_hinh']}}" alt="product"></td>
                                                             <td>
-                                                                <h6>Lorem ipsum dolor</h6>
-                                                                <p>Product code PSBJ3</p>
+                                                                <h6>{{$p['item']['ten_sp']}}</h6>
+                                                                <p>{{$p['item']['ten_sp']}}</p>
                                                             </td>
                                                             <td>
-                                                            	<span class="quantity"><span class="light">1 x</span> $79.00</span>
-                                                                <a href="#" class="parent-color">Remove</a>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                    		<td><img src="source/img/products/sample1.jpg" alt="product"></td>
-                                                            <td>
-                                                                <h6>Lorem ipsum dolor</h6>
-                                                                <p>Product code PSBJ3</p>
-                                                            </td>
-                                                            <td>
-                                                            	<span class="quantity"><span class="light">1 x</span> $79.00</span>
-                                                                <a href="#" class="parent-color">Remove</a>
+                                                            	<span class="quantity"><span class="light">{{$p['qty']}} x</span> {{$p['item']['gia']}}</span>
+                                                                <a href="{{route('xoagiohang',$p['item']['id_sp'])}}" class="parent-color">Xóa</a>
                                                             </td>
                                                         </tr>
-                                                        <tr>
-                                                    		<td><img src="source/img/products/sample1.jpg" alt="product"></td>
-                                                            <td>
-                                                                <h6>Lorem ipsum dolor</h6>
-                                                                <p>Product code PSBJ3</p>
-                                                            </td>
-                                                            <td>
-                                                            	<span class="quantity"><span class="light">1 x</span> $79.00</span>
-                                                                <a href="#" class="parent-color">Remove</a>
-                                                            </td>
-                                                        </tr>
+														@endforeach
                                                     </table>
                                                     
                                                     <br class="clearfix">
@@ -89,31 +65,27 @@
                                                 
 												<div class="footer">
 													<table class="checkout-table pull-right">
-                                                    	<tr>
-                                                        	<td class="align-right">Tax:</td>
-                                                            <td>$0.00</td>
-                                                        </tr>
                                                         <tr>
-                                                        	<td class="align-right">Discount:</td>
-                                                            <td>$37.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                        	<td class="align-right"><strong>Total:</strong></td>
-                                                            <td><strong class="parent-color">$999.00</strong></td>
+                                                        	<td class="align-right"><strong>Tổng tiền:</strong></td>
+                                                            <td><strong class="parent-color">{{Session('cart')->totalPrice}}</strong></td>
                                                         </tr>
                                                     </table>
 												</div>
                                                 
                                                 <div class="box-wrapper no-border">
-                                                	<a class="button pull-right parent-background" href="#">Checkout</a>
-													<a class="button pull-right" href="order_info.html">View Cart</a>
+                                                	<a class="button pull-right parent-background" href="#">Mua hàng</a>
+													<a class="button pull-right" href="order_info.html">Xem giỏ hàng</a>
                                                 </div>
 											</li>
 										</ul>
                                     </li>
+									@else
+									<li class="orange"><a href="order_info.html"><i class="icons icon-basket-2"></i>0</a>
+                                    </li>
+									@endif
 									<li class="login-create purple">
                                     	<i class="icons icon-user"></i>
-                                        <p>Hello Guest! <a href="#">Login</a> or<br><a href="#">Create Account</a></p>
+                                        <p>Xin chào! <a href="#">Đăng nhập</a> hoặc<br><a href="#">Đăng ký</a> để chúng tôi được phụ vụ bạn tốt hơn</p>
 										<ul id="login-dropdown" class="box-dropdown">
 											<li>
                                             	<div class="box-wrapper">
@@ -161,11 +133,11 @@
 						<ul>
 							
 							<li class="home-green current-item">
-								<a href="home_v1.html">
+								<a href="{{route('trang-chu')}}">
 									<span class="nav-caption">Trang chủ</span>
 									<span class="nav-description">Sản phẩm mới nhất</span>
 								</a>
-								
+								<!--
 								<ul class="normal-dropdown normalAnimation">
 									<li><a href="#">Layouts <i class="icons icon-right-dir"></i></a>
 										<ul class="normalAnimation">
@@ -202,6 +174,7 @@
 										</ul>
 									</li>
 								</ul>
+								-->
 							</li>
 							
 							<li class="red">
@@ -209,7 +182,7 @@
 									<span class="nav-caption">Điện thoại</span>
 									<span class="nav-description">Điện thoại & Tablet</span>
 								</a>
-								
+								<!--
 								<ul class="wide-dropdown normalAniamtion">
 									<li>
 										<ul>
@@ -238,7 +211,7 @@
 										</ul>
 									</li>
 								</ul>
-								
+								-->
 							</li>
 							
 							<li class="blue">

@@ -34,3 +34,13 @@ Route::get('lien-he', [
     'as' => 'lienhe',
     'uses' => 'PageController@getContact'
 ]);
+// Thêm 1 sp trong giỏ hàng
+Route::get('them-gio-hang/{id}',[
+    'as' => 'themgiohang',
+    'uses' => 'PageController@getAddToCart'
+]);
+// Xóa 1 sp trong giỏ hàng
+Route::get('xoa-gio-hang/{id}',[
+    'as' => 'xoagiohang',
+    'uses' => 'PageController@getDeleteItemCart'
+]);

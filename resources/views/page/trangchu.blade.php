@@ -164,7 +164,7 @@
 											
 											<div class="product-image">
 												<span class="product-tag">Sale</span>
-												<img src="source/img/products/technology/{{$new -> url_hinh}}" alt="Product1">
+												<img src="source/img/products/{{$new -> url_hinh}}" alt="Product1">
 												<a href="products_page_v1.html" class="product-hover">
 													<i class="icons icon-eye-1"></i> Xem
 												</a>
@@ -179,21 +179,11 @@
 											<div class="product-actions">
 												<span class="add-to-cart">
 													<span class="action-wrapper">
-														<i class="icons icon-basket-2"></i>
+														<i class="icons icon-basket-2"> Thêm vào giỏ hàng</i>
+														<a href="{{route('themgiohang',$new -> id_sp)}}">
 														<span class="action-name">Add to cart</span>
+														</a>
 													</span >
-												</span>
-												<span class="add-to-favorites">
-													<span class="action-wrapper">
-														<i class="icons icon-heart-empty"></i>
-														<span class="action-name">Add to wishlist</span>
-													</span>
-												</span>
-												<span class="add-to-compare">
-													<span class="action-wrapper">
-														<i class="icons icon-docs"></i>
-														<span class="action-name">Add to Compare</span>
-													</span>
 												</span>
 											</div>
 											

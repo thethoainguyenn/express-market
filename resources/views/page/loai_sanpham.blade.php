@@ -5,134 +5,35 @@
 				
                 <div class="col-lg-12 col-md-12 col-sm-12">
                 	<div class="breadcrumbs">
-                    	<p><a href="#">Home</a> <i class="icons icon-right-dir"></i> Computers &amp; Tablets</p>
+                    	<p><a href="{{route('trang-chu')}}">Trang chủ</a> <i class="icons icon-right-dir"></i> {{$ten_theoloai[0] -> ten_loai}}</p>
                     </div>
                 </div>
                 
 				<!-- Main Content -->
 				<section class="main-content col-lg-9 col-md-9 col-sm-9 col-lg-push-3 col-md-push-3 col-sm-push-3">
                         
-                    <div class="row">
-                    
-                    	<!-- Heading -->
-						<div class="col-lg-12 col-md-12 col-sm-12">
-							
-							<div class="carousel-heading">
-								<h4>Computer &amp; Tablets</h4>
-							</div>
-							
-						</div>
-						<!-- /Heading -->
-                        
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                        	
-                            <div class="row subcategories">
-                            	
-                                <!-- Subcategory -->
-                                <div class="col-lg-fifth col-md-fifth col-sm-fifth subcategory">
-                                	
-                                    <a href="#"><img src="source/img/products/sample1.jpg" alt="Product1"></a>
-                                    <div class="product-info">
-                                        <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-                                    </div>
-                                    
-                                </div>
-                               	<!-- /Subcategory --> 
-                                
-                                <!-- Subcategory -->
-                                <div class="col-lg-fifth col-md-fifth col-sm-fifth subcategory">
-                                	
-                                    <a href="#"><img src="source/img/products/sample2.jpg" alt="Product1"></a>
-                                    <div class="product-info">
-                                        <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-                                    </div>
-                                    
-                                </div>
-                               	<!-- /Subcategory --> 
-                                
-                                <!-- Subcategory -->
-                                <div class="col-lg-fifth col-md-fifth col-sm-fifth subcategory">
-                                	
-                                    <a href="#"><img src="source/img/products/sample3.jpg" alt="Product1"></a>
-                                    <div class="product-info">
-                                        <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-                                    </div>
-                                    
-                                </div>
-                               	<!-- /Subcategory --> 
-                                
-                                <!-- Subcategory -->
-                                <div class="col-lg-fifth col-md-fifth col-sm-fifth subcategory">
-                                	
-                                    <a href="#"><img src="source/img/products/sample4.jpg" alt="Product1"></a>
-                                    <div class="product-info">
-                                        <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-                                    </div>
-                                    
-                                </div>
-                               	<!-- /Subcategory --> 
-                                
-                                <!-- Subcategory -->
-                                <div class="col-lg-fifth col-md-fifth col-sm-fifth subcategory">
-                                	
-                                    <a href="#"><img src="source/img/products/sample5.jpg" alt="Product1"></a>
-                                    <div class="product-info">
-                                        <h6><a href="#">Lorem ipsum dolor sit amet</a></h6>
-                                    </div>
-                                    
-                                </div>
-                               	<!-- /Subcategory --> 
-                                
-                            </div>
-                            
-                        </div>
-                        
-                    </div>
+
                      
 					<div class="row">
                     	
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                        	<div class="category-heading">
-								<select class="chosen-select">
-                                	<option>Product name</option>
-                                   	<option>Product name</option>
-                                    <option>Product name</option>
-                                    <option>Product name</option> 
-                                </select>
-                                <select class="chosen-select">
-                                	<option>Select manufacturer</option>
-                                   	<option>Product name</option>
-                                    <option>Product name</option>
-                                    <option>Product name</option> 
-                                </select>
-                                <div class="category-buttons">
-									<a href="category_v1.html"><i class="icons icon-th-3 active-button"></i></a>
-									<a href="category_v2.html"><i class="icons icon-th-list-4"></i></a>
-								</div>
-							</div>
-                        </div>
+					<div class="col-lg-12 col-md-12 col-sm-12">		
+						<div class="carousel-heading">
+							<h4>
+							{{$ten_theoloai[0] -> ten_loai}}
+							</h4>
+						</div>
+					</div>
                         
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                        	<div class="category-results">
-                            	<p>Results 1-6 of 6</p>
-                                <p>Show 
-                                <select class="chosen-select">
-                                	<option>1</option>
-                                   	<option>2</option>
-                                    <option>6</option>
-                                    <option>P10</option> 
-                                </select>
-                                per page
-                                </p>
-                            </div>
+                        	
                         </div>
                         
                         <div class="col-lg-6 col-md-6 col-sm-6">
                         	<div class="pagination">
                             	<a href="#"><div class="previous"><i class="icons icon-left-dir"></i></div></a>
-                                <a href="#"><div class="page-button">1</div></a>
-                                <a href="#"><div class="page-button">2</div></a>
-                                <a href="#"><div class="page-button">3</div></a>
+								
+                                <a href="{{route('loaisanpham',1)}}"><div class="page-button">1</div></a>
+							
                                 <a href="#"><div class="next"><i class="icons icon-right-dir"></i></div></a>
                             </div>
                         </div>
@@ -140,506 +41,39 @@
                    </div>
                    
                    <div class="row"> 
+                        <!-- LAY DANH SACH SAN PHAM THEO LOAI -->
                         <!-- Product Item -->
+                        @foreach($sp_theoloai as $sp)
                         <div class="col-lg-4 col-md-4 col-sm-4 product">
                             
                             <div class="product-image">
-                                <img src="source/img/products/sample1.jpg" alt="Product1">
+                                <img src="source/img/products/{{$sp -> url_hinh}}" alt="Product1">
                                 <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
+														<i class="icons icon-eye-1"></i> Xem ngay
 													</a>
                             </div>
                             
                             <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
+                                <h5><a href="products_page_v1.html">{{$sp -> ten_sp}}</a></h5>
+                                <span class="price">{{number_format($sp -> gia,0)}} VND</span>
                                 <div class="rating readonly-rating" data-score="4"></div>
                             </div>
                             
                             <div class="product-actions">
 													<span class="add-to-cart">
                                                         <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
+                                                            <i class="icons icon-basket-2"> Thêm vào giỏ hàng</i>
                                                             <span class="action-name">Add to cart</span>
                                                         </span >
                                                     </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
+							</div>
                             
                         </div>
-                        <!-- Product Item -->
-                        
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample2.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
-                        
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample3.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample4.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
-                        
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample5.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
-                        
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample6.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample7.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
-                        
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample8.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
-                        
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample9.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample1.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
-                        
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample2.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
-                        
-                        
-                        <!-- Product Item -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 product">
-                            
-                            <div class="product-image">
-                                <img src="source/img/products/sample3.jpg" alt="Product1">
-                                <a href="products_page_v1.html" class="product-hover">
-														<i class="icons icon-eye-1"></i> Quick View
-													</a>
-                            </div>
-                            
-                            <div class="product-info">
-                                <h5><a href="products_page_v1.html">Lorem ipsum dolor sit amet</a></h5>
-                                <span class="price">$281.00</span>
-                                <div class="rating readonly-rating" data-score="4"></div>
-                            </div>
-                            
-                            <div class="product-actions">
-													<span class="add-to-cart">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-basket-2"></i>
-                                                            <span class="action-name">Add to cart</span>
-                                                        </span >
-                                                    </span>
-													<span class="add-to-favorites">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-heart-empty"></i>
-                                                            <span class="action-name">Add to wishlist</span>
-                                                        </span>
-                                                    </span>
-													<span class="add-to-compare">
-                                                        <span class="action-wrapper">
-                                                            <i class="icons icon-docs"></i>
-                                                            <span class="action-name">Add to Compare</span>
-                                                        </span>
-                                                    </span>
-												</div>
-                            
-                        </div>
-                        <!-- Product Item -->
+                        @endforeach
+                        <!-- /Product Item -->
+                        <!-- END LAY DANH SACH SAN PHAM THEO LOAI -->
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="category-results">
-                                <p>Results 1-6 of 6</p>
-                                <p>Show 
-                                <select class="chosen-select">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>6</option>
-                                    <option>P10</option> 
-                                </select>
-                                per page
-                                </p>
-                            </div>
+                           
                         </div>
                         
                         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -649,16 +83,13 @@
                                 <a href="#"><div class="page-button">2</div></a>
                                 <a href="#"><div class="page-button">3</div></a>
                                 <a href="#"><div class="next"><i class="icons icon-right-dir"></i></div></a>
-                            </div>
-                        </div>
-                        
-                    </div>
-					
-					
-						
+							</div>
+                        	</div>
+                        <div>
+						</div>
+                	</div>
 				</section>
 				<!-- /Main Content -->
-				
 				
 				
 				
@@ -744,36 +175,6 @@
 						
 					</div>
 					<!-- /Compare Products -->
-					
-					
-					<!-- Carousel -->
-					<div class="row sidebar-box">
-						
-						<div class="col-lg-12 col-md-12 col-sm-12 sidebar-carousel">
-							
-							<!-- Slider -->
-							<section class="sidebar-slider">
-								<div class="sidebar-flexslider">
-									<ul class="slides">
-										<li>
-											<a href="#"><img src="source/img/sidebar-slide1.jpg" alt="Slide1"/></a>
-										</li>
-										<li>
-											<a href="#"><img src="source/img/sidebar-slide2.jpg" alt="Slide1"/></a>
-										</li>
-										<li>
-											<a href="#"><img src="source/img/sidebar-slide3.jpg" alt="Slide1"/></a>
-										</li>
-									</ul>
-								</div>
-								<div class="slider-nav"></div>
-							</section>
-							<!-- /Slider -->
-                            
-						</div>
-						
-					</div>
-					<!-- /Carousel -->
 					
 					
 					<!-- Bestsellers -->
